@@ -13,17 +13,17 @@
         <link rel="canonical" href="https://invoke-ai.github.io/InvokeAI/nodes/NODES/">
       
       
-        <link rel="prev" href="../defaultNodes/">
+        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../comfyToInvoke/">
+        <link rel="next" href="../defaultNodes/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
-        <title>Workflow Editor Usage - InvokeAI Documentation</title>
+        <title>Workflow Editor Basics - InvokeAI Documentation</title>
       
     
     
@@ -45,6 +45,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +77,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
   
     
     
@@ -122,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workflow Editor Usage
+              Workflow Editor Basics
             
           </span>
         </div>
@@ -135,21 +137,7 @@
             
             
             
-            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-            
-              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
-              </label>
-            
-          
-            
-            
-            
-            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-            
-              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
-              </label>
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
             
           
         </form>
@@ -252,11 +240,23 @@
   
   
     <li class="md-tabs__item">
-      <a href="../communityNodes/" class="md-tabs__link md-tabs__link--active">
+      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
         Workflows & Nodes
       </a>
     </li>
   
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../communityNodes/" class="md-tabs__link">
+      Community Nodes
+    </a>
+  </li>
 
       
         
@@ -296,23 +296,11 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../CHANGELOG/" class="md-tabs__link">
-      Changelog
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
   
   
   
     <li class="md-tabs__item">
-      <a href="../../deprecated/CLI/" class="md-tabs__link">
+      <a href="../../deprecated/2to3/" class="md-tabs__link">
         Deprecated
       </a>
     </li>
@@ -782,8 +770,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -804,50 +790,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../communityNodes/" class="md-nav__link">
-        Community Nodes
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exampleWorkflows/" class="md-nav__link">
-        Example Workflows
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../overview/" class="md-nav__link">
         Nodes Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../defaultNodes/" class="md-nav__link">
-        List of Default Nodes
       </a>
     </li>
   
@@ -870,12 +814,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Workflow Editor Usage
+          Workflow Editor Basics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Workflow Editor Usage
+        Workflow Editor Basics
       </a>
       
         
@@ -900,6 +844,13 @@
   
     <nav class="md-nav" aria-label="Features">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-library" class="md-nav__link">
+    Workflow Library
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#linear-view" class="md-nav__link">
@@ -935,11 +886,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#important-concepts" class="md-nav__link">
-    Important Concepts
+  <a href="#important-nodes-concepts" class="md-nav__link">
+    Important Nodes &amp; Concepts
   </a>
   
-    <nav class="md-nav" aria-label="Important Concepts">
+    <nav class="md-nav" aria-label="Important Nodes & Concepts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1025,6 +976,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../defaultNodes/" class="md-nav__link">
+        List of Default Nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exampleWorkflows/" class="md-nav__link">
+        Example Workflows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../comfyToInvoke/" class="md-nav__link">
         ComfyUI to InvokeAI
       </a>
@@ -1074,13 +1053,28 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../communityNodes/" class="md-nav__link">
+        Community Nodes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
         
@@ -1129,14 +1123,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../features/">Features</a>
           
-            <label for="__nav_4">
+            <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Features
         </label>
@@ -1248,8 +1242,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        Nodes & Workflows
+      <a href="../overview" class="md-nav__link">
+        Workflows &  Nodes
       </a>
     </li>
   
@@ -1309,7 +1303,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_13" >
       
       
         
@@ -1319,13 +1313,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_5_13" id="__nav_5_13_label" tabindex="0">
           Textual Inversions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_13">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_13">
           <span class="md-nav__icon md-icon"></span>
           Textual Inversions
         </label>
@@ -1455,7 +1449,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
         
@@ -1479,13 +1473,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Contributing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Contributing
         </label>
@@ -1530,7 +1524,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
       
       
         
@@ -1546,17 +1540,15 @@
         
           
         
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_3">
           <span class="md-nav__icon md-icon"></span>
           Development
         </label>
@@ -1584,20 +1576,6 @@
     <li class="md-nav__item">
       <a href="../../contributing/contribution_guides/newContributorChecklist/" class="md-nav__link">
         New Contributors
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/ARCHITECTURE/" class="md-nav__link">
-        InvokeAI Architecture
       </a>
     </li>
   
@@ -1653,7 +1631,7 @@
   
     <li class="md-nav__item">
       <a href="../../contributing/TESTS/" class="md-nav__link">
-        Adding Tests
+        Testing
       </a>
     </li>
   
@@ -1764,21 +1742,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../CHANGELOG/" class="md-nav__link">
-        Changelog
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1788,6 +1751,10 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
+        
+          
+        
+          
         
           
         
@@ -1823,8 +1790,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../deprecated/2to3/" class="md-nav__link">
+        InvokeAI 2.3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../deprecated/CLI/" class="md-nav__link">
         Command Line Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        Changelog
       </a>
     </li>
   
@@ -2113,9 +2108,13 @@
 <p>The workflow editor is a blank canvas allowing for the use of individual functions and image transformations to control the image generation workflow. Nodes take in inputs on the left side of the node, and return an output on the right side of the node. A node graph is composed of multiple nodes that are connected together to create a workflow. Nodes' inputs and outputs are connected by dragging connectors from node to node. Inputs and outputs are color coded for ease of use.</p>
 <p>If you're not familiar with Diffusion, take a look at our <a href="../../help/diffusion/">Diffusion Overview.</a> Understanding how diffusion works will enable you to more easily use the Workflow Editor and build workflows to suit your needs.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h2>
+<h3 id="workflow-library">Workflow Library<a class="headerlink" href="#workflow-library" title="Permanent link">#</a></h3>
+<p>The Workflow Library enables you to save workflows to the Invoke database, allowing you to easily creating, modify and share workflows as needed. </p>
+<p>A curated set of workflows are provided by default - these are designed to help explain important nodes' usage in the Workflow Editor.</p>
+<p><img alt="workflow_library" src="../../assets/nodes/workflow_library.png" /></p>
 <h3 id="linear-view">Linear View<a class="headerlink" href="#linear-view" title="Permanent link">#</a></h3>
 <p>The Workflow Editor allows you to create a UI for your workflow, to make it easier to iterate on your generations. </p>
-<p>To add an input to the Linear UI, right click on the input label and select "Add to Linear View".</p>
+<p>To add an input to the Linear UI, right click on the <strong>input label</strong> and select "Add to Linear View".</p>
 <p>The Linear UI View will also be part of the saved workflow, allowing you share workflows and enable other to use them, regardless of complexity. </p>
 <p><img alt="linearview" src="../../assets/nodes/linearview.png" /></p>
 <h3 id="renaming-fields-and-nodes">Renaming Fields and Nodes<a class="headerlink" href="#renaming-fields-and-nodes" title="Permanent link">#</a></h3>
@@ -2129,7 +2128,7 @@
 </ul>
 <h3 id="node-caching">Node Caching<a class="headerlink" href="#node-caching" title="Permanent link">#</a></h3>
 <p>Nodes have a "Use Cache" option in their footer. This allows for performance improvements by using the previously cached values during the workflow processing. </p>
-<h2 id="important-concepts">Important Concepts<a class="headerlink" href="#important-concepts" title="Permanent link">#</a></h2>
+<h2 id="important-nodes-concepts">Important Nodes &amp; Concepts<a class="headerlink" href="#important-nodes-concepts" title="Permanent link">#</a></h2>
 <p>There are several node grouping concepts that can be examined with a narrow focus. These (and other) groupings can be pieced together to make up functional graph setups, and are important to understanding how groups of nodes work together as part of a whole. Note that the screenshots below aren't examples of complete functioning node graphs (see Examples).</p>
 <h3 id="noise">Noise<a class="headerlink" href="#noise" title="Permanent link">#</a></h3>
 <p>An initial noise tensor is necessary for the latent diffusion process. As a result, the Denoising node requires a noise node input.  </p>
@@ -2142,7 +2141,7 @@
 <p><img alt="groupsimgvae" src="../../assets/nodes/groupsimgvae.png" /></p>
 <h3 id="defined-random-seeds">Defined &amp; Random Seeds<a class="headerlink" href="#defined-random-seeds" title="Permanent link">#</a></h3>
 <p>It is common to want to use both the same seed (for continuity) and random seeds (for variety). To define a seed, simply enter it into the 'Seed' field on a noise node. Conversely, the RandomInt node generates a random integer between 'Low' and 'High', and can be used as input to the 'Seed' edge point on a noise node to randomize your seed.</p>
-<p><img alt="groupsrandseed" src="../../assets/nodes/groupsrandseed.png" /></p>
+<p><img alt="groupsrandseed" src="../../assets/nodes/groupsnoise.png" /></p>
 <h3 id="controlnet">ControlNet<a class="headerlink" href="#controlnet" title="Permanent link">#</a></h3>
 <p>The ControlNet node outputs a Control, which can be provided as input to a Denoise Latents node. Depending on the type of ControlNet desired, ControlNet nodes usually require an image processor node, such as a Canny Processor or Depth Processor, which prepares an input image for use with ControlNet.</p>
 <p><img alt="groupscontrol" src="../../assets/nodes/groupscontrol.png" /></p>
@@ -2164,7 +2163,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2024</span>
       
         <br>
         Created:
